@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            border: 1px solid black;
+        }
+
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "container-body container-body container-body"
+            "container-body container-body container-body"
+            "footer footer footer"
+            ;
+            grid-template-rows: 15svh 40svh 20svh 20svh;
+
+            .header{
+                grid-area: header;
+                background-color: blue;
+            }
+            .container-body{
+                grid-area: container-body;
+                background-color: cyan;
+                display: inline-flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .body{
+                background-color: darkmagenta;
+                align-content: center;
+                height: 10vh;
+                width: 50vh;
+                border-radius: 20px
+            }
+            .footer{
+                grid-area: footer;
+                background-color: gray;
+            }
+            .chat{
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                height: 30vh;
+                width: 30vh;
+                background-color: brown;
+            }
+            .menu{
+                background-color: green;
+                align-content: center;
+                height: 45vh;
+                width: 15vh;
+                border-radius: 20px;
+            }
+            .login{
+                background-color: red;
+                align-content: center;
+                height: 45vh;
+                width: 15vh;
+                border-radius: 20px
+            }
+            .product{
+                background-color: darkmagenta;
+                align-content: center;
+                height: 10vh;
+                width: 50vh;
+                border-radius: 20px
+            }
+        }
+
+    </style>
+</head>
+<body> 
+<div class="container">
+    <div class="header">Banner</div>
+    <div class="container-body">
+        <div class="menu">menu</div>
+        <div class="product">product</div>
+        <div class="login">login</div>
+    </div>
+    <div class="footer">footer</div>
+    <div class="chat">chat</div>
+</div>
+</body>
+</html>
